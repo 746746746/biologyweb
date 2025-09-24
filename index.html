@@ -202,7 +202,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 <div class="dish-card bg-white rounded-xl overflow-hidden shadow-card card-hover cursor-pointer transition-all duration-300" data-dish="yuxiang">
                     <div class="relative h-56 overflow-hidden rounded-t-xl shine-effect">
-                        <img src="鱼香肉丝.jpg" alt="鱼香肉丝" class="w-full h-full object-cover transition-custom hover:scale-105">
+                        <img src="images/鱼香肉丝.jpg" alt="鱼香肉丝" class="w-full h-full object-cover transition-custom hover:scale-105">
                         <div class="gradient-overlay"></div>
                         <div class="dish-badge pulse-animation">
                             热门
@@ -231,7 +231,7 @@
                 
                 <div class="dish-card bg-white rounded-xl overflow-hidden shadow-card card-hover cursor-pointer transition-all duration-300" data-dish="tangcu">
                     <div class="relative h-56 overflow-hidden rounded-t-xl shine-effect">
-                        <img src="糖醋排骨.jpg" alt="糖醋排骨" class="w-full h-full object-cover transition-custom hover:scale-105">
+                        <img src="images/糖醋排骨.jpg" alt="糖醋排骨" class="w-full h-full object-cover transition-custom hover:scale-105">
                         <div class="gradient-overlay"></div>
                         <div class="absolute bottom-4 left-4 text-white">
                             <h3 class="text-xl font-bold text-shadow">糖醋排骨</h3>
@@ -257,7 +257,7 @@
                 
                 <div class="dish-card bg-white rounded-xl overflow-hidden shadow-card card-hover cursor-pointer transition-all duration-300" data-dish="suncaiyu">
                     <div class="relative h-56 overflow-hidden rounded-t-xl shine-effect">
-                        <img src="酸菜鱼.jpg" alt="酸菜鱼" class="w-full h-full object-cover transition-custom hover:scale-105">
+                        <img src="images/酸菜鱼.jpg" alt="酸菜鱼" class="w-full h-full object-cover transition-custom hover:scale-105">
                         <div class="gradient-overlay"></div>
                         <div class="absolute bottom-4 left-4 text-white">
                             <h3 class="text-xl font-bold text-shadow">酸菜鱼</h3>
@@ -479,7 +479,7 @@
                                             <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
                                                 <i class="fa fa-cube text-primary"></i>
                                             </div>
-                                            <span class="text-lg">乳清源酸味剂</span>
+                                            <span class="text-lg">乳清源酸味剂（含乳脂味、乳酸味、水果香、焦糖味、香草味、矿物清香）</span>
                                         </div>
                                         <span id="lacticAcidAmount" class="font-semibold text-neutral-700 text-lg">15g</span>
                                     </div>
@@ -511,7 +511,7 @@
                                     <i class="fa fa-info-circle text-primary mr-2"></i> 制作步骤
                                 </h4>
                                 <ol class="list-decimal pl-5 space-y-2 text-neutral-600 text-base" id="preparationSteps">
-                                    <li>称取所需乳清调味剂</li>
+                                    <li>称取所需乳清调味剂（含乳脂味、乳酸味、水果香、焦糖味、香草味、矿物清香）</li>
                                     <li>缓慢加入醋并搅拌均匀</li>
                                     <li>静置2分钟让风味充分融合</li>
                                     <li>如选择果味，加入3g对应果味剂并搅拌</li>
@@ -589,117 +589,105 @@
                 'suncaiyu': '酸菜鱼'
             };
             
-            // 酸度等级对应的配比 (关键修改：按要求设置1-5级的乳清源酸味剂和醋的比例)
+            // 酸度等级对应的配比
             const acidityLevels = {
                 1: { lactic: 25, acetic: 0, description: '25g 乳清源酸味剂（含乳脂味、乳酸味、水果香、焦糖味、香草味、矿物清香）' },
-                2: { lactic: 20, acetic: 5, description: '20g 乳清源酸味剂和 5g 醋（含醋酸味、糯米甜香、坚果味、陈酿窖香、麸皮香、大曲香）' },
-                3: { lactic: 15, acetic: 10, description: '15g 乳清源酸味剂和 10g 醋（含醋酸味、糯米甜香、坚果味、陈酿窖香、麸皮香、大曲香）' },
-                4: { lactic: 10, acetic: 15, description: '10g 乳清源酸味剂和 15g 醋（含醋酸味、糯米甜香、坚果味、陈酿窖香、麸皮香、大曲香）' },
-                5: { lactic: 5, acetic: 20, description: '5g 乳清源酸味剂和 20g 醋（含醋酸味、糯米甜香、坚果味、陈酿窖香、麸皮香、大曲香）' }
+                2: { lactic: 20, acetic: 5, description: '20g 乳清源酸味剂（含乳脂味、乳酸味、水果香、焦糖味、香草味、矿物清香）和 5g 醋（含醋酸味、糯米甜香、坚果味、陈酿窖香、麸皮香、大曲香）' },
+                3: { lactic: 15, acetic: 10, description: '15g 乳清源酸味剂（含乳脂味、乳酸味、水果香、焦糖味、香草味、矿物清香）和 10g 醋（含醋酸味、糯米甜香、坚果味、陈酿窖香、麸皮香、大曲香）' },
+                4: { lactic: 10, acetic: 15, description: '10g 乳清源酸味剂（含乳脂味、乳酸味、水果香、焦糖味、香草味、矿物清香）和 15g 醋（含醋酸味、糯米甜香、坚果味、陈酿窖香、麸皮香、大曲香）' },
+                5: { lactic: 5, acetic: 20, description: '5g 乳清源酸味剂（含乳脂味、乳酸味、水果香、焦糖味、香草味、矿物清香）和 20g 醋（含醋酸味、糯米甜香、坚果味、陈酿窖香、麸皮香、大曲香）' }
             };
             
-            // 菜品风味特征映射
-            const dishFlavorContext = {
-                'yuxiang': {
-                    flavorDesc: '鱼香风味浓郁，酸甜适中，乳清的柔和酸味与香醋的醇厚感相互补充',
-                    dominantAromas: '乳脂味、水果香（乳清）；陈酿窖香、醋酸味（香醋）',
-                    secondaryAromas: '乳酸味、焦糖味（乳清）；麸皮香、大曲香（香醋）'
-                },
-                'tangcu': {
-                    flavorDesc: '糖醋风味突出，乳清的圆润酸味平衡了糖醋的甜腻感',
-                    dominantAromas: '焦糖味、香草味（乳清）；糯米甜香、醋酸味（香醋）',
-                    secondaryAromas: '乳脂味、水果香（乳清）；坚果味、陈酿窖香（香醋）'
-                },
-                'suncaiyu': {
-                    flavorDesc: '酸辣平衡，乳清的清爽酸味与香醋的醇厚感形成独特层次',
-                    dominantAromas: '矿物清香、乳酸味（乳清）；坚果味、大曲香（香醋）',
-                    secondaryAromas: '水果香、乳脂味（乳清）；陈酿窖香、麸皮香（香醋）'
-                }
+            // 风味特征映射
+            const flavorCharacteristics = {
+                1: "浓郁的乳清风味占主导，乳脂香气突出，带有柔和的乳酸味和水果香，口感顺滑圆润。",
+                2: "乳清风味明显，乳脂味与水果香突出，伴有轻微的醋酸味提升整体鲜度，口感丰富有层次。",
+                3: "乳清与香醋风味均衡融合，形成'双酸协同'的味感，乳清的乳酸味与香醋的醋酸味协调交织，味感鲜活。",
+                4: "香醋风味更为明显，醋酸味与糯米甜香突出，乳清的乳脂味与香草味作为辅助，提升整体复杂度。",
+                5: "醇厚的香醋风味占主导，陈酿窖香与坚果味突出，乳清的矿物清香作为背景，增添回味的悠长感。"
             };
             
-            // DOM元素
-            const customerInterface = document.getElementById('customerInterface');
-            const chefInterface = document.getElementById('chefInterface');
+            // 主导香气映射
+            const dominantAromas = {
+                1: "乳脂味、乳酸味、水果香（乳清）",
+                2: "乳脂味、水果香、焦糖味（乳清）；轻微醋酸味（香醋）",
+                3: "乳脂味、乳酸味、水果香（乳清）；醋酸味、糯米甜香、坚果味（香醋）",
+                4: "醋酸味、糯米甜香、坚果味（香醋）；乳脂味、香草味（乳清）",
+                5: "醋酸味、陈酿窖香、麸皮香（香醋）"
+            };
+            
+            // 辅助香气映射
+            const secondaryAromas = {
+                1: "焦糖味、香草味、矿物清香（乳清）",
+                2: "乳酸味、香草味、矿物清香（乳清）；糯米甜香（香醋）",
+                3: "焦糖味、香草味、矿物清香（乳清）；陈酿窖香、麸皮香、大曲香（香醋）",
+                4: "大曲香、陈酿窖香（香醋）；水果香、焦糖味、矿物清香（乳清）",
+                5: "坚果味、大曲香（香醋）；乳脂味、乳酸味（乳清）"
+            };
+            
+            // 厨师视图香气特征映射
+            const chefAromaCharacteristics = {
+                1: "乳脂味、乳酸味、水果香占主导，带有焦糖味、香草味和矿物清香作为辅助",
+                2: "乳脂味与水果香突出，伴有轻微的醋酸味和糯米甜香",
+                3: "乳脂味、乳酸味、水果香与醋酸味、糯米甜香、坚果味协同呈现",
+                4: "醋酸味与糯米甜香为主导，乳脂味与香草味作为辅助",
+                5: "陈酿窖香与醋酸味突出，带有坚果味和麸皮香"
+            };
+            
+            // 移动端菜单切换
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // 界面切换（顾客/厨师）
             const customerBtn = document.getElementById('customerBtn');
             const chefBtn = document.getElementById('chefBtn');
             const mobileCustomerBtn = document.getElementById('mobileCustomerBtn');
             const mobileChefBtn = document.getElementById('mobileChefBtn');
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileMenu = document.getElementById('mobileMenu');
-            const dishCards = document.querySelectorAll('.dish-card');
-            const customizationSection = document.getElementById('customizationSection');
-            const selectedDishName = document.getElementById('selectedDishName');
-            const aciditySlider = document.getElementById('aciditySlider');
-            const acidityValue = document.getElementById('acidityValue');
-            const acidityDetails = document.getElementById('acidityDetails');
-            const flavorOptions = document.querySelectorAll('.flavor-option');
-            const cancelCustomization = document.getElementById('cancelCustomization');
-            const submitOrder = document.getElementById('submitOrder');
-            const orderSuccess = document.getElementById('orderSuccess');
-            const newOrderBtn = document.getElementById('newOrderBtn');
-            const ordersList = document.getElementById('ordersList');
-            const noOrdersMessage = document.getElementById('noOrdersMessage');
-            const recipeDetails = document.getElementById('recipeDetails');
-            const noSelectedOrder = document.getElementById('noSelectedOrder');
-            const orderRecipeContent = document.getElementById('orderRecipeContent');
-            const currentOrderId = document.getElementById('currentOrderId');
-            const recipeDish = document.getElementById('recipeDish');
-            const recipeAcidity = document.getElementById('recipeAcidity');
-            const recipeFlavor = document.getElementById('recipeFlavor');
-            const acidityRatio = document.getElementById('acidityRatio');
-            const chefFlavorCharacteristic = document.getElementById('chefFlavorCharacteristic');
-            const chefAromaCharacteristic = document.getElementById('chefAromaCharacteristic');
-            const lacticAcidAmount = document.getElementById('lacticAcidAmount');
-            const aceticAcidAmount = document.getElementById('aceticAcidAmount');
-            const flavorAdditiveContainer = document.getElementById('flavorAdditiveContainer');
-            const flavorAdditiveName = document.getElementById('flavorAdditiveName');
-            const flavorAdditiveAmount = document.getElementById('flavorAdditiveAmount');
-            const completeOrderBtn = document.getElementById('completeOrderBtn');
-            const flavorCharacteristic = document.getElementById('flavorCharacteristic');
-            const dominantAromas = document.getElementById('dominantAromas');
-            const secondaryAromas = document.getElementById('secondaryAromas');
+            const customerInterface = document.getElementById('customerInterface');
+            const chefInterface = document.getElementById('chefInterface');
             
-            // 切换界面
             function switchToCustomerInterface() {
                 customerInterface.classList.remove('hidden');
                 chefInterface.classList.add('hidden');
-                customerBtn.classList.add('text-primary', 'border-primary');
-                customerBtn.classList.remove('text-neutral-500');
-                chefBtn.classList.remove('text-primary', 'border-primary');
-                chefBtn.classList.add('text-neutral-500');
+                customerBtn.classList.add('text-primary', 'border-b-2', 'border-primary');
+                chefBtn.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                customerBtn.classList.add('active');
+                chefBtn.classList.remove('active');
+                mobileMenu.classList.add('hidden');
             }
             
             function switchToChefInterface() {
                 chefInterface.classList.remove('hidden');
                 customerInterface.classList.add('hidden');
-                chefBtn.classList.add('text-primary', 'border-primary');
-                chefBtn.classList.remove('text-neutral-500');
-                customerBtn.classList.remove('text-primary', 'border-primary');
-                customerBtn.classList.add('text-neutral-500');
+                chefBtn.classList.add('text-primary', 'border-b-2', 'border-primary');
+                customerBtn.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                chefBtn.classList.add('active');
+                customerBtn.classList.remove('active');
+                mobileMenu.classList.add('hidden');
                 updateOrdersList();
             }
             
-            // 移动端菜单切换
-            mobileMenuBtn.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-            
-            // 界面切换事件监听
             customerBtn.addEventListener('click', switchToCustomerInterface);
             chefBtn.addEventListener('click', switchToChefInterface);
-            mobileCustomerBtn.addEventListener('click', function() {
-                switchToCustomerInterface();
-                mobileMenu.classList.add('hidden');
-            });
-            mobileChefBtn.addEventListener('click', function() {
-                switchToChefInterface();
-                mobileMenu.classList.add('hidden');
-            });
+            mobileCustomerBtn.addEventListener('click', switchToCustomerInterface);
+            mobileChefBtn.addEventListener('click', switchToChefInterface);
             
             // 菜品选择
+            const dishCards = document.querySelectorAll('.dish-card');
+            const customizationSection = document.getElementById('customizationSection');
+            const selectedDishName = document.getElementById('selectedDishName');
+            const cancelCustomization = document.getElementById('cancelCustomization');
+            
             dishCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    currentDish = this.getAttribute('data-dish');
+                const selectBtn = card.querySelector('.select-dish-btn');
+                
+                selectBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    currentDish = card.dataset.dish;
                     selectedDishName.textContent = dishNames[currentDish];
                     
                     // 显示定制区域并添加动画
@@ -708,42 +696,8 @@
                         customizationSection.classList.remove('opacity-0', 'translate-y-4');
                     }, 10);
                     
-                    // 更新风味描述
-                    updateFlavorDescription();
-                });
-            });
-            
-            // 酸度调整
-            aciditySlider.addEventListener('input', function() {
-                currentAcidity = parseInt(this.value);
-                acidityValue.textContent = currentAcidity;
-                
-                // 更新酸度详情
-                const levelData = acidityLevels[currentAcidity];
-                acidityDetails.textContent = levelData.description;
-                
-                // 更新风味描述
-                updateFlavorDescription();
-            });
-            
-            // 更新风味描述
-            function updateFlavorDescription() {
-                if (!currentDish) return;
-                
-                const context = dishFlavorContext[currentDish];
-                flavorCharacteristic.textContent = context.flavorDesc;
-                dominantAromas.textContent = context.dominantAromas;
-                secondaryAromas.textContent = context.secondaryAromas;
-            }
-            
-            // 口味选择
-            flavorOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    // 移除其他选项的选中状态
-                    flavorOptions.forEach(opt => opt.classList.remove('selected'));
-                    // 添加当前选项的选中状态
-                    this.classList.add('selected');
-                    currentFlavor = this.getAttribute('data-flavor');
+                    // 滚动到定制区域
+                    customizationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 });
             });
             
@@ -752,25 +706,62 @@
                 customizationSection.classList.add('opacity-0', 'translate-y-4');
                 setTimeout(() => {
                     customizationSection.classList.add('hidden');
+                    currentDish = null;
                 }, 500);
             });
             
+            // 酸度滑块
+            const aciditySlider = document.getElementById('aciditySlider');
+            const acidityValue = document.getElementById('acidityValue');
+            const acidityDetails = document.getElementById('acidityDetails');
+            const flavorCharacteristic = document.getElementById('flavorCharacteristic');
+            const dominantAromasEl = document.getElementById('dominantAromas');
+            const secondaryAromasEl = document.getElementById('secondaryAromas');
+            
+            aciditySlider.addEventListener('input', function() {
+                currentAcidity = parseInt(this.value);
+                acidityValue.textContent = currentAcidity;
+                acidityDetails.textContent = acidityLevels[currentAcidity].description;
+                flavorCharacteristic.textContent = flavorCharacteristics[currentAcidity];
+                dominantAromasEl.textContent = dominantAromas[currentAcidity];
+                secondaryAromasEl.textContent = secondaryAromas[currentAcidity];
+            });
+            
+            // 口味选择
+            const flavorOptions = document.querySelectorAll('.flavor-option');
+            
+            flavorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // 移除其他选项的选中状态
+                    flavorOptions.forEach(opt => opt.classList.remove('selected'));
+                    // 添加当前选项的选中状态
+                    this.classList.add('selected');
+                    currentFlavor = this.dataset.flavor;
+                });
+            });
+            
             // 提交订单
-            submitOrder.addEventListener('click', function() {
-                if (!currentDish || !currentFlavor) return;
+            const submitOrderBtn = document.getElementById('submitOrder');
+            const orderSuccess = document.getElementById('orderSuccess');
+            const newOrderBtn = document.getElementById('newOrderBtn');
+            
+            submitOrderBtn.addEventListener('click', function() {
+                if (!currentDish) return;
                 
                 // 创建新订单
                 const newOrder = {
                     id: nextOrderId++,
                     dish: currentDish,
+                    dishName: dishNames[currentDish],
                     acidity: currentAcidity,
                     flavor: currentFlavor,
-                    timestamp: new Date()
+                    flavorName: flavorNames[currentFlavor],
+                    time: new Date().toLocaleTimeString()
                 };
                 
                 orders.push(newOrder);
                 
-                // 显示订单成功提示
+                // 隐藏定制区域，显示成功提示
                 customizationSection.classList.add('opacity-0', 'translate-y-4');
                 setTimeout(() => {
                     customizationSection.classList.add('hidden');
@@ -779,6 +770,18 @@
                         orderSuccess.classList.remove('opacity-0');
                     }, 10);
                 }, 500);
+                
+                // 重置当前选择
+                currentDish = null;
+                currentFlavor = 'original';
+                currentAcidity = 3;
+                
+                // 重置UI
+                aciditySlider.value = 3;
+                acidityValue.textContent = 3;
+                acidityDetails.textContent = acidityLevels[3].description;
+                flavorOptions.forEach(opt => opt.classList.remove('selected'));
+                flavorOptions[0].classList.add('selected');
                 
                 // 更新厨师界面的订单列表
                 updateOrdersList();
@@ -794,6 +797,9 @@
             
             // 更新订单列表
             function updateOrdersList() {
+                const ordersList = document.getElementById('ordersList');
+                const noOrdersMessage = document.getElementById('noOrdersMessage');
+                
                 ordersList.innerHTML = '';
                 
                 if (orders.length === 0) {
@@ -803,84 +809,83 @@
                 
                 noOrdersMessage.classList.add('hidden');
                 
-                // 按时间倒序排列订单
-                const sortedOrders = [...orders].sort((a, b) => b.timestamp - a.timestamp);
-                
-                sortedOrders.forEach(order => {
+                orders.forEach(order => {
                     const orderItem = document.createElement('div');
                     orderItem.className = `border rounded-xl p-4 cursor-pointer transition-custom hover:shadow-md ${selectedOrderId === order.id ? 'order-item-selected' : ''}`;
-                    orderItem.setAttribute('data-order-id', order.id);
+                    orderItem.dataset.orderId = order.id;
                     
                     orderItem.innerHTML = `
                         <div class="flex justify-between items-start mb-2">
-                            <span class="font-medium">${dishNames[order.dish]}</span>
-                            <span class="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full">
-                                #${order.id}
-                            </span>
+                            <h4 class="font-medium">${order.dishName}</h4>
+                            <span class="text-sm text-neutral-500">${order.time}</span>
                         </div>
-                        <div class="text-sm text-neutral-500 space-y-1">
-                            <p>酸度: ${order.acidity}级</p>
-                            <p>口味: ${flavorNames[order.flavor]}</p>
-                            <p class="text-xs text-neutral-400 mt-2">
-                                ${formatTime(order.timestamp)}
-                            </p>
+                        <div class="flex justify-between text-sm text-neutral-600">
+                            <span>酸度: ${order.acidity}级</span>
+                            <span>口味: ${order.flavorName}</span>
+                        </div>
+                        <div class="mt-3 flex justify-end">
+                            <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded-full">
+                                订单 #${order.id}
+                            </span>
                         </div>
                     `;
                     
                     orderItem.addEventListener('click', function() {
                         selectedOrderId = order.id;
-                        updateRecipeDetails(order);
-                        updateOrdersList(); // 重新渲染列表以更新选中状态
+                        updateOrdersList();
+                        showOrderRecipe(order.id);
                     });
                     
                     ordersList.appendChild(orderItem);
                 });
             }
             
-            // 更新配方详情
-            function updateRecipeDetails(order) {
-                if (!order) {
-                    noSelectedOrder.classList.remove('hidden');
-                    orderRecipeContent.classList.add('hidden');
-                    currentOrderId.textContent = '请选择订单';
-                    return;
-                }
+            // 显示订单配方详情
+            function showOrderRecipe(orderId) {
+                const order = orders.find(o => o.id === orderId);
+                if (!order) return;
                 
+                const noSelectedOrder = document.getElementById('noSelectedOrder');
+                const orderRecipeContent = document.getElementById('orderRecipeContent');
+                const currentOrderId = document.getElementById('currentOrderId');
+                const recipeDish = document.getElementById('recipeDish');
+                const recipeAcidity = document.getElementById('recipeAcidity');
+                const recipeFlavor = document.getElementById('recipeFlavor');
+                const acidityRatio = document.getElementById('acidityRatio');
+                const lacticAcidAmount = document.getElementById('lacticAcidAmount');
+                const aceticAcidAmount = document.getElementById('aceticAcidAmount');
+                const flavorAdditiveContainer = document.getElementById('flavorAdditiveContainer');
+                const flavorAdditiveName = document.getElementById('flavorAdditiveName');
+                const chefFlavorCharacteristic = document.getElementById('chefFlavorCharacteristic');
+                const chefAromaCharacteristic = document.getElementById('chefAromaCharacteristic');
+                
+                // 显示配方内容，隐藏提示
                 noSelectedOrder.classList.add('hidden');
                 orderRecipeContent.classList.remove('hidden');
+                
+                // 更新配方信息
                 currentOrderId.textContent = `订单 #${order.id}`;
-                
-                const levelData = acidityLevels[order.acidity];
-                const isOriginal = order.flavor === 'original';
-                
-                // 更新订单信息
-                recipeDish.textContent = dishNames[order.dish];
+                recipeDish.textContent = order.dishName;
                 recipeAcidity.textContent = `${order.acidity}级`;
-                recipeFlavor.textContent = flavorNames[order.flavor];
+                recipeFlavor.textContent = order.flavorName;
+                acidityRatio.textContent = acidityLevels[order.acidity].description;
+                lacticAcidAmount.textContent = `${acidityLevels[order.acidity].lactic}g`;
+                aceticAcidAmount.textContent = `${acidityLevels[order.acidity].acetic}g`;
+                chefFlavorCharacteristic.textContent = flavorCharacteristics[order.acidity];
+                chefAromaCharacteristic.textContent = chefAromaCharacteristics[order.acidity];
                 
-                // 更新酸度配比
-                acidityRatio.textContent = levelData.description;
-                
-                // 更新风味特征
-                const context = dishFlavorContext[order.dish];
-                chefFlavorCharacteristic.textContent = context.flavorDesc;
-                chefAromaCharacteristic.textContent = `${context.dominantAromas.split('；')[0]}与${context.dominantAromas.split('；')[1]}协同呈现`;
-                
-                // 更新原料配比
-                lacticAcidAmount.textContent = `${levelData.lactic}g`;
-                aceticAcidAmount.textContent = `${levelData.acetic}g`;
-                
-                // 更新果味剂信息 (关键修改：果味剂固定为3g)
-                if (isOriginal) {
-                    flavorAdditiveContainer.classList.add('hidden');
-                } else {
+                // 处理风味添加剂显示
+                if (order.flavor !== 'original') {
                     flavorAdditiveContainer.classList.remove('hidden');
-                    flavorAdditiveName.textContent = `${flavorNames[order.flavor]}果味剂`;
-                    flavorAdditiveAmount.textContent = '3g'; // 固定为3g
+                    flavorAdditiveName.textContent = `${order.flavorName}添加剂`;
+                } else {
+                    flavorAdditiveContainer.classList.add('hidden');
                 }
             }
             
             // 完成订单
+            const completeOrderBtn = document.getElementById('completeOrderBtn');
+            
             completeOrderBtn.addEventListener('click', function() {
                 if (selectedOrderId === null) return;
                 
@@ -888,22 +893,18 @@
                 orders = orders.filter(order => order.id !== selectedOrderId);
                 selectedOrderId = null;
                 
-                // 更新界面
+                // 更新订单列表和配方详情
                 updateOrdersList();
-                updateRecipeDetails(null);
+                
+                const noSelectedOrder = document.getElementById('noSelectedOrder');
+                const orderRecipeContent = document.getElementById('orderRecipeContent');
+                
+                noSelectedOrder.classList.remove('hidden');
+                orderRecipeContent.classList.add('hidden');
             });
             
-            // 格式化时间
-            function formatTime(date) {
-                const hours = date.getHours().toString().padStart(2, '0');
-                const minutes = date.getMinutes().toString().padStart(2, '0');
-                return `${hours}:${minutes}`;
-            }
-            
-            // 初始化界面
-            switchToCustomerInterface();
-            // 默认选择原味
-            document.querySelector('.flavor-option[data-flavor="original"]').classList.add('selected');
+            // 初始化
+            updateOrdersList();
         });
     </script>
 </body>
